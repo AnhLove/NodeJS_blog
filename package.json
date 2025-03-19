@@ -1,0 +1,35 @@
+{
+  "name": "duannodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "dev": "nodemon index.js",
+    "build": "node index.js",
+    "start:prod": "node index.js",
+    "build:prod": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnhLove/NodeJS_blog.git"
+  },
+  "keywords": [
+    "anhlove15",
+    "NodeJS",
+    "blog"
+  ],
+  "author": "anhlove",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnhLove/NodeJS_blog/issues"
+  },
+  "homepage": "https://github.com/AnhLove/NodeJS_blog#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
