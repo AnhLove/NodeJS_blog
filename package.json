@@ -1,9 +1,10 @@
 {
   "name": "duannodejs",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "nodemon --inspect src/index.js",
+    "watch": "sass --watch src/resource/scss:src/public/css --watch",
     "dev": "nodemon index.js",
     "build": "node index.js",
     "start:prod": "node index.js",
@@ -27,9 +28,13 @@
   "homepage": "https://github.com/AnhLove/NodeJS_blog#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "sass": "^1.86.0"
   }
 }
