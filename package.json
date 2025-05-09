@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "sass --watch src/resource/scss:src/public/css --watch",
     "dev": "nodemon index.js",
@@ -27,14 +28,26 @@
   },
   "homepage": "https://github.com/AnhLove/NodeJS_blog#readme",
   "description": "",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "mongoose": "^8.14.2"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
     "sass": "^1.86.0"
   }
 }
