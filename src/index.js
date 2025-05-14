@@ -31,12 +31,11 @@ app.engine(
   })
 );
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resources/views"));
-console.log(__dirname);
+app.set("views", path.join(__dirname, "resources", "views"));
 
 // Routes init
 route(app);
 
 app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 );
