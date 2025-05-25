@@ -96,7 +96,6 @@
         var restoreBtn = $('.btn-restore');
         var checkboxAll = $('#checkbox-all');
         var courseItemCheckbox = $('input[name="courseIds[]"]');
-        var checkAllSubmitBtn = $('.btn-check-all-submit');
 
         //When dialog confirm clicked
         $('#delete-course-modal').on('show.bs.modal', function (event) {
@@ -131,14 +130,6 @@
             var isCheckedAll = courseItemCheckbox.length === $('input[name="courseIds[]"]:checked').length;
             checkboxAll.prop('checked', isCheckedAll);
             renderCheckAllSubmitBtn();
-        });
-
-        //Check all submit button clicked
-        checkAllSubmitBtn.on('submit', function (e) {
-            var isSubmittable = !$(this).hasClass('disabled');
-            if (!isSubmittable) {
-                e.preventDefault();
-            }
         });
 
         // Re-render check all submit button
