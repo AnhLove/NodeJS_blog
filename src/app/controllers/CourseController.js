@@ -18,14 +18,12 @@ class CourseController {
 
   // [POST] /courses/store
   store(req, res, next) {
-    req.body.image = `https://i.ytimg.com/vi/${req.body.videoID}/hq720.jpg`;
+    req.body.image = `https://i.ytimg.com/vi/${req.body.videoID}/hq720.jpg`;    
     const course = new Course(req.body);
-    course.save()
+    course
+      .save()
       .then(() => res.redirect("/me/stored/courses"))
-      .catch((error) => {
-          console.error("Lỗi khi lưu khóa học:", error);
-          res.status(400).send("Thêm khóa học thất bại. Có thể tên hoặc videoID đã tồn tại.");
-      });
+      .catch(next);
   }
 
   // [GET] /courses/:id/edit
